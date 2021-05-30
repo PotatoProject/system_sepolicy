@@ -88,11 +88,12 @@ endif
 NEVERALLOW_ARG :=
 ifeq ($(SELINUX_IGNORE_NEVERALLOWS),true)
 ifeq ($(TARGET_BUILD_VARIANT),user)
+ifneq ($(TARGET_BOARD_PLATFORM), $(filter $(TARGET_BOARD_PLATFORM), $(ALLOWED_SELINUX_VIOLATORS)))
 $(error SELINUX_IGNORE_NEVERALLOWS := true cannot be used in user builds)
 endif
+endif
 $(warning Be careful when using the SELINUX_IGNORE_NEVERALLOWS flag. \
-          It does not work in user builds and using it will \
-          not stop you from failing CTS.)
+          It will not stop you from failing CTS.)
 NEVERALLOW_ARG := -N
 endif
 
