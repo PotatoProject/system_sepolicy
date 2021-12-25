@@ -18,6 +18,11 @@ else
 LOCAL_ADDITIONAL_M4DEFS :=
 endif
 
+BOARD_EXCLUDE_PLATFORM_APP_SEPOLICY_AS_MLSTRUSTEDSUBJECT ?= true
+ifeq ($(BOARD_EXCLUDE_PLATFORM_APP_SEPOLICY_AS_MLSTRUSTEDSUBJECT),true)
+BOARD_SEPOLICY_M4DEFS += board_exclude_platform_app_sepolicy_as_mlstrustedsubject=true
+endif
+
 # sepolicy is now divided into multiple portions:
 # public - policy exported on which non-platform policy developers may write
 #   additional policy.  types and attributes are versioned and included in

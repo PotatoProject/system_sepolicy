@@ -28,3 +28,9 @@ neverallow {
   -runas
   -zygote
 } { app_data_file privapp_data_file }:dir { read getattr search };
+
+ifelse(board_need_platform_app_sepolicy_as_mlstrustedsubject, `true', ,
+neverallow { mlstrustedsubject -platform_app } { app_data_file privapp_data_file }:file ~{ read write map getattr ioctl lock append };
+neverallow { mlstrustedsubject -platform_app } { app_data_file privapp_data_file }:dir ~{ read getattr search };
+neverallow { mlstrustedsubject -platform_app } { app_data_file privapp_data_file }:dir { read getattr search };
+)
