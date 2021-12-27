@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17c6784f_2bc32110",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000165
+      },
+      "writtenOn": "2021-12-27T04:28:13Z",
+      "side": 1,
+      "message": "This introduces a security flaw as all of the platform apps will have\naccess to /data/ partition.",
+      "revId": "8b86c472daa38e2d14e082707c63392abfa20a33",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
