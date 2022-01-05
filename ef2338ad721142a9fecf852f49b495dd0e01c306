@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bbcc4ed_702c25ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-05T13:11:42Z",
+      "side": 1,
+      "message": "https://review.potatoproject.co/c/PotatoProject/device_mediatek_sepolicy/+/9924",
+      "revId": "ef2338ad721142a9fecf852f49b495dd0e01c306",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
